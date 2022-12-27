@@ -1,0 +1,54 @@
+
+/* CANVAS  */
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    z-index: 1;    
+}
+
+
+
+
+/* LOADING */
+
+.logoLoading{
+    position: absolute;
+    top : 30%;
+    left : 40%;
+    width: 10%;
+    top : 30%;
+    z-index: 100;
+    background-color: white;
+    cursor: wait;
+
+}
+.logoLoading.ended{
+    z-index: 0;
+}
+.loading-bar
+{
+    position: absolute;
+    left : 20%;
+    width: 60%;
+    top: 80%;
+    height: 3px;
+    background: #ffffff;
+    transform:scaleX(0);
+    transform-origin: top left;
+    transition: transform 2s;
+    z-index: 101;
+    cursor: wait;
+}
+
+.loading-bar.ended
+{
+    transform: scaleX(0);
+    transform-origin: 100% 0;
+    transition: transform 1.5s ease-in-out;
+    z-index: 0;
+}
+
