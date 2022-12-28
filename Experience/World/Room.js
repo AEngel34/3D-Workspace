@@ -10,23 +10,6 @@ export default class Room{
         this.resources = this.experience.loaders
         this.time = this.experience.time
         this.materials = new Material()
-
-        //Piano Touche
-        this.touche1 = null
-        this.touche2 = null
-        this.touche3 = null
-        this.touche4 = null
-        this.touche5 = null
-        this.touche6 = null
-        this.touche7 = null
-        this.touche8 = null
-        this.touche9 = null
-        this.touche10 = null
-        this.touche11 = null
-        this.touche12 = null
-        this.touche13 = null
-        this.touche14 = null
-        this.touche15 = null                       
                
         this.resource = this.resources.items.fullModel
 
@@ -50,35 +33,20 @@ export default class Room{
             
             switch(child.name){         
                 case 'Touche1'           :
-                    this.touche1 = child
                 case 'Touche2'           :
-                    this.touche2 = child
                 case 'Touche3'           :
-                    this.touche3 = child
                 case 'Touche4'           :
-                    this.touche4 = child
                 case 'Touche5'           :
-                    this.touche5 = child
                 case 'Touche6'           :
-                    this.touche6 = child
                 case 'Touche7'           :
-                    this.touche7 = child
                 case 'Touche8'           :
-                    this.touche8 = child
                 case 'Touche9'           :
-                    this.touche9 = child
                 case 'Touche10'          :
-                    this.touche10 = child
                 case 'Touche11'          :
-                    this.touche11 = child
                 case 'Touche12'          :
-                    this.touche12 = child
                 case 'Touche13'          :
-                    this.touche13 = child
                 case 'Touche14'          :
-                    this.touche14 = child
                 case 'Touche15'          :
-                    this.touche15 = child
                 case 'Piano'             :                
                 case 'Interface'         :
                 case 'Feuille'           : 
@@ -129,7 +97,7 @@ export default class Room{
 
                 case  'Dog'     :
                 case 'Langue'   :
-                case 'Queue':               
+                case 'Queue'    :               
                     child.material = this.materials.materials[3]
                     child.frustumCulled = false
                     child.material.side = DoubleSide              
@@ -177,6 +145,7 @@ export default class Room{
 
                 case 'vitre'    :
                     child.material = this.materials.materials[9]
+                    child.material.side = DoubleSide
                 break
 
                 case 'SmokeCoffee' :

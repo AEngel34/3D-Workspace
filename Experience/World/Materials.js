@@ -8,7 +8,7 @@ import rgbFragmentShader from '../../shader/RGB/fragment.glsl'
 import vitreFragmentShader from '../../shader/vitre/fragment.glsl'
 import coffeeFragmentShader from '../../shader/coffee/fragment.glsl'
 import coffeeVertexShader from '../../shader/coffee/vertex.glsl'
-import { Color, MeshBasicMaterial, RawShaderMaterial, ShaderMaterial, Vector2 } from 'three'
+import { Color, MeshBasicMaterial, MeshPhysicalMaterial, RawShaderMaterial, ShaderMaterial, Vector2 } from 'three'
 
 
 export default class Material{

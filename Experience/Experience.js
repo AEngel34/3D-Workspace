@@ -17,10 +17,9 @@ export default class Experience {
         }
         instance = this
 
-        //Options
+
         this.canvas = canvas
 
-        //Setup
         this.sizes = new Sizes()
         this.time = new Time()
         this.scene = new Scene()
@@ -29,12 +28,10 @@ export default class Experience {
         this.renderer = new Renderer()
         this.world = new World()        
 
-        //Resize Event
         this.sizes.on('resize',()=>{
             this.resize()
         })
 
-        //Time Tick Event
         this.time.on('tick',()=>{
             this.update()
         })

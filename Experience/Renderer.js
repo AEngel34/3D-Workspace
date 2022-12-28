@@ -1,4 +1,4 @@
-import * as THREE from 'three'
+import { CineonToneMapping, WebGLRenderer } from 'three';
 
 import Experience from "./Experience";
 
@@ -14,12 +14,12 @@ export default class Renderer{
     }
 
     setInstance(){
-        this.instance = new THREE.WebGLRenderer({
+        this.instance = new WebGLRenderer({
             canvas : this.canvas,
             antialias : true
         })
 
-        this.instance.toneMapping = THREE.CineonToneMapping
+        this.instance.toneMapping = CineonToneMapping
         this.instance.toneMappingExposure = 1
         this.instance.setSize(this.sizes.width, this.sizes.height)
         this.instance.setPixelRatio(Math.min(this.sizes.pixelRatio, 2))

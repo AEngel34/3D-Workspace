@@ -6,17 +6,11 @@ export default class World{
         this.experience = new Experience()
         this.scene = this.experience.scene
         this.resources = this.experience.loaders
-        
-        //Wait For Resources
 
         this.resources.on('ready',()=>{
-            //Setup
             this.room = new Room()
-        })
-
+        }) 
     }
-
-
 
     update(){
         if(this.room){
