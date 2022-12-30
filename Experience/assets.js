@@ -32,7 +32,7 @@ export default [
     {
         name : 'fullModel',
         type : 'model',
-        path : 'models/folio.glb'
+        path : 'models/room.glb'
     }
 
 ]

@@ -139,8 +139,7 @@ export default class Room{
 
                 case 'SmokeCoffee' :
                     this.smokeCoffee = child                                      
-                    child.material = this.materials.materials[11]
-                    child.frustumCulled = false                    
+                    child.material = this.materials.materials[11]                   
                 break
             }
         })
