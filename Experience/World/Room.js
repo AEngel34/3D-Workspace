@@ -1,6 +1,6 @@
 import Material from "./Materials";
 import Experience from "../Experience";
-import { AnimationMixer, DoubleSide, Mesh, PlaneGeometry } from "three";
+import { AnimationMixer, DoubleSide, Mesh, PlaneGeometry} from "three";
 
 export default class Room{
     constructor(){
@@ -29,24 +29,13 @@ export default class Room{
         this.model = this.resource.scene
         this.scene.add(this.model)
 
-        this.model.traverse((child)=>{         
+        this.model.traverse((child)=>{ 
+            
+            if(child.name.includes('Touche')){
+                child.material = this.materials.materials[0]
+            }
             
             switch(child.name){         
-                case 'Touche1'           :
-                case 'Touche2'           :
-                case 'Touche3'           :
-                case 'Touche4'           :
-                case 'Touche5'           :
-                case 'Touche6'           :
-                case 'Touche7'           :
-                case 'Touche8'           :
-                case 'Touche9'           :
-                case 'Touche10'          :
-                case 'Touche11'          :
-                case 'Touche12'          :
-                case 'Touche13'          :
-                case 'Touche14'          :
-                case 'Touche15'          :
                 case 'Piano'             :                
                 case 'Interface'         :
                 case 'Feuille'           : 

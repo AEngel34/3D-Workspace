@@ -19,8 +19,7 @@ export default class Renderer{
             antialias : true
         })
 
-        this.instance.toneMapping = CineonToneMapping
-        this.instance.toneMappingExposure = 1
+        this.instance.toneMapping = CineonToneMapping    
         this.instance.setSize(this.sizes.width, this.sizes.height)
         this.instance.setPixelRatio(Math.min(this.sizes.pixelRatio, 2))
 

@@ -8,7 +8,7 @@ import rgbFragmentShader from '../../shader/RGB/fragment.glsl'
 import vitreFragmentShader from '../../shader/vitre/fragment.glsl'
 import coffeeFragmentShader from '../../shader/coffee/fragment.glsl'
 import coffeeVertexShader from '../../shader/coffee/vertex.glsl'
-import { Color, MeshBasicMaterial, MeshPhysicalMaterial, RawShaderMaterial, ShaderMaterial, Vector2 } from 'three'
+import { Color, MeshBasicMaterial,RawShaderMaterial, ShaderMaterial, Vector2 } from 'three'
 
 
 export default class Material{
@@ -118,7 +118,8 @@ export default class Material{
                 color : {value :new Color(0xff0000)} 
             },
             vertexShader,
-            fragmentShader : rgbFragmentShader,   
+            fragmentShader : rgbFragmentShader,  
+            emissive : 10 
         })
 
         //Color Variation RGB Material
@@ -179,7 +180,21 @@ export default class Material{
         `
         })
 
-        this.materials = [baked1Material,baked2Material,baked3Material,dogMaterial,screen1Material,screen2Material,screenPhoneMaterial,blackMaterial,greyMaterial,vitreMaterial,rgbMaterial,coffeeSmokeMaterial,overlayMaterial]      
+        this.materials = [
+            baked1Material,
+            baked2Material,
+            baked3Material,
+            dogMaterial,
+            screen1Material,
+            screen2Material,
+            screenPhoneMaterial,
+            blackMaterial,
+            greyMaterial,
+            vitreMaterial,
+            rgbMaterial,
+            coffeeSmokeMaterial,
+            overlayMaterial
+        ]      
     }
 }
 
