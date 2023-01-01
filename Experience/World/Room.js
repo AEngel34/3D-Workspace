@@ -153,7 +153,7 @@ export default class Room{
     }
 
     update(){
-        this.animation.mixer.update(this.time.delta * 0.0010)
+        this.animation.mixer.update(this.time.delta * 0.001)
         this.smokeCoffee.material.uniforms.uTime.value = this.time.elapsed
 
         if(this.groupVentilo1[0]){
